@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Minimal Blog</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>My Minimal Blog</h1>
+  <header class="navbar">
+    <h1 class="logo">My Minimal Blog</h1>
     <nav>
       <a href="#">Home</a>
       <a href="#">About</a>
       <a href="#">Contact</a>
+      <button id="theme-toggle" aria-label="Toggle dark mode">🌓</button>
     </nav>
   </header>
 
-  <main>
-    <article>
+  <main class="container">
+    <section class="post-card">
       <h2><a href="#">First Post</a></h2>
       <p class="date">October 14, 2025</p>
       <p>Welcome to my first post! This is a simple, clean blog layout built with pure HTML, CSS, and JS.</p>
-    </article>
+    </section>
 
-    <article>
+    <section class="post-card">
       <h2><a href="#">Another Post</a></h2>
       <p class="date">October 10, 2025</p>
       <p>Another entry with minimal design and clean typography.</p>
-    </article>
+    </section>
   </main>
 
   <footer>

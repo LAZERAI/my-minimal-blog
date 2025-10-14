@@ -1,69 +1,97 @@
-/* ===== Basic Reset ===== */
+:root {
+  --bg: #0d0d0d;
+  --text: #eaeaea;
+  --accent: #7f5af0;
+  --card-bg: #161616;
+}
+
+.light {
+  --bg: #ffffff;
+  --text: #222222;
+  --accent: #5a4ff0;
+  --card-bg: #f5f5f5;
+}
+
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
-/* ===== Global Styles ===== */
 body {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
   line-height: 1.6;
-  color: #222;
-  background-color: #fff;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
+  transition: background 0.3s, color 0.3s;
 }
 
-/* ===== Header ===== */
-header {
-  text-align: center;
-  margin-bottom: 2rem;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  border-bottom: 1px solid #333;
+  background: var(--card-bg);
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
-header h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+.logo {
+  font-weight: 600;
+  color: var(--accent);
 }
 
-nav a {
-  color: #555;
+.navbar a {
+  color: var(--text);
+  margin-left: 1rem;
   text-decoration: none;
-  margin: 0 0.5rem;
-  font-weight: 500;
+  transition: color 0.2s;
 }
 
-nav a:hover {
-  color: #000;
+.navbar a:hover {
+  color: var(--accent);
 }
 
-/* ===== Blog Posts ===== */
-article {
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #eee;
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
 
-article h2 {
-  margin-bottom: 0.3rem;
-  font-size: 1.5rem;
+.post-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
 }
 
-article .date {
+.post-card:hover {
+  transform: translateY(-3px);
+}
+
+.post-card a {
+  text-decoration: none;
+  color: var(--accent);
+}
+
+.date {
   font-size: 0.9rem;
-  color: #666;
+  opacity: 0.7;
   margin-bottom: 0.5rem;
 }
 
-article p {
-  color: #333;
-}
-
-/* ===== Footer ===== */
 footer {
   text-align: center;
-  margin-top: 2rem;
+  padding: 2rem 0;
+  border-top: 1px solid #333;
+  background: var(--card-bg);
+}
+
+footer p {
   font-size: 0.9rem;
-  color: #888;
+  opacity: 0.7;
 }
